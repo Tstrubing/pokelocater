@@ -93,13 +93,31 @@ function build_map_update(location) {
 			});
             refresh_map_with_new_data();
 			setTimeout(function(){
-				navigator.geolocation.getCurrentPosition(handler);
+                                var fake_location_coords = {
+                                    latitude: "42.332672",
+                                    longitude: "-83.046771",
+                                };
+                                var fake_location = {
+                                    "coords": fake_location_coords
+                                }
+                                handler(fake_location);
+    
+    	                        //navigator.geolocation.getCurrentPosition(handler);
 			}, 30000);
 		},
 		error: function() {
 			console.log('Error while attempting to retrieve poke locations');
 			setTimeout(function(){
-				navigator.geolocation.getCurrentPosition(handler);
+                                var fake_location_coords = {
+                                    latitude: "42.332672",
+                                    longitude: "-83.046771",
+                                };
+                                var fake_location = {
+                                    "coords": fake_location_coords
+                                }
+                                handler(fake_location);
+    
+    	                        //navigator.geolocation.getCurrentPosition(handler);
 			}, 5000);
 		}
 	});
