@@ -35,16 +35,16 @@ jQuery(function($) {
 });
 
 function map_api_loaded() {
-    navigator.geolocation.getCurrentPosition(handler);
-	
-	//var fake_location_coords = {
-	//	latitude: "35.6894",
-	//	longitude: "139.692"
-	//};
-	//var fake_location = {
-	//	"coords": fake_location_coords
-	//}
-	//handler(fake_location);
+    var fake_location_coords = {
+    latitude: "35.6894",
+    longitude: "139.692"
+    };
+    var fake_location = {
+    "coords": fake_location_coords
+    }
+    handler(fake_location);
+    
+    	//navigator.geolocation.getCurrentPosition(handler);
 }
 
 function build_initial_map(location) {
