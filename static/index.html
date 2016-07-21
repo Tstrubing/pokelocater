@@ -103,7 +103,7 @@ function build_map_update(location) {
                                 handler(fake_location);
     
     	                        //navigator.geolocation.getCurrentPosition(handler);
-			}, 30000);
+			}, 3000);
 		},
 		error: function() {
 			console.log('Error while attempting to retrieve poke locations');
@@ -118,7 +118,7 @@ function build_map_update(location) {
                                 handler(fake_location);
     
     	                        //navigator.geolocation.getCurrentPosition(handler);
-			}, 5000);
+			}, 1000);
 		}
 	});
 }
