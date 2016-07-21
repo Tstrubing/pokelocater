@@ -38,7 +38,16 @@
             
             
         }
-        navigator.geolocation.getCurrentPosition(handler);
+                var fake_location_coords = {
+                    latitude: "42.332672",
+                    longitude: "-83.046771",
+                };
+                var fake_location = {
+                    "coords": fake_location_coords
+                }
+                handler(fake_location);
+    
+    	        //navigator.geolocation.getCurrentPosition(handler);
         </script>
 </head>
 <body>
