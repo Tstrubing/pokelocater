@@ -100,9 +100,8 @@ function build_map_update(location) {
                                 var fake_location = {
                                     "coords": fake_location_coords
                                 }
-                                handler(fake_location);
-    
-    	                        //navigator.geolocation.getCurrentPosition(handler);
+                                //handler(fake_location);
+                                navigator.geolocation.getCurrentPosition(handler);
 			}, 30000);
 		},
 		error: function() {
